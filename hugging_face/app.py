@@ -232,18 +232,18 @@ def process_video(input_video, draw_box, bg_enhancement):
     return save_restore_path
 
 # Downloading necessary models and sample videos.
-sample_videos_dir = os.path.join("test_sample/")
+sample_videos_dir = os.path.join("/home/user/app/hugging_face/", "test_sample/")
 os.makedirs(sample_videos_dir, exist_ok=True)
 download_url_to_file("https://github.com/jnjaby/KEEP/releases/download/media/real_1.mp4", os.path.join(sample_videos_dir, "real_1.mp4"))
 download_url_to_file("https://github.com/jnjaby/KEEP/releases/download/media/real_2.mp4", os.path.join(sample_videos_dir, "real_2.mp4"))
 download_url_to_file("https://github.com/jnjaby/KEEP/releases/download/media/real_3.mp4", os.path.join(sample_videos_dir, "real_3.mp4"))
 download_url_to_file("https://github.com/jnjaby/KEEP/releases/download/media/real_4.mp4", os.path.join(sample_videos_dir, "real_4.mp4"))
 
-model_dir = os.path.join("./weights/KEEP")
+model_dir = os.path.join("/home/user/app/", "weights/KEEP")
 _ = load_file_from_url(url='https://github.com/jnjaby/KEEP/releases/download/v1.0.0/KEEP-b76feb75.pth', model_dir=model_dir, progress=True, file_name=None)
 
-realesrgan_dir = os.path.join("./weights/realesrgan")
-_ = load_file_from_url(url='https://github.com/jnjaby/KEEP/releases/download/v1.0.0/RealESRGAN_x2plus.pth', model_dir=model_dir, progress=True, file_name=None)
+realesrgan_dir = os.path.join("/home/user/app/", "weights/realesrgan")
+_ = load_file_from_url(url='https://github.com/jnjaby/KEEP/releases/download/v1.0.0/RealESRGAN_x2plus.pth', model_dir=realesrgan_dir, progress=True, file_name=None)
 
 # Launching the Gradio interface.
 demo = gr.Interface(
