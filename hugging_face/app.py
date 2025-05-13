@@ -71,7 +71,7 @@ def set_realesrgan():
         if not any(gpu in torch.cuda.get_device_name(0) for gpu in no_half_gpu_list):
             use_half = True
     model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=2)
-    upsampler = RealESRGANer(scale=2, model_path="https://github.com/jnjaby/KEEP/releases/download/v0.1.0/RealESRGAN_x2plus.pth", model=model, tile=400, tile_pad=40, pre_pad=0, half=use_half)
+    upsampler = RealESRGANer(scale=2, model_path="https://github.com/jnjaby/KEEP/releases/download/v1.0.0/RealESRGAN_x2plus.pth", model=model, tile=400, tile_pad=40, pre_pad=0, half=use_half)
     if not gpu_is_available():
         import warnings
         warnings.warn('Running on CPU now! Make sure your PyTorch version matches your CUDA. The unoptimized RealESRGAN is slow on CPU.', category=RuntimeWarning)
@@ -105,7 +105,7 @@ def process_video(input_video, draw_box, bg_enhancement):
                 'codebook_size': 1024, 'cft_list': ['16', '32', '64'], 'kalman_attn_head_dim': 48,
                 'num_uncertainty_layers': 3, 'cfa_list': ['16', '32'], 'cfa_nhead': 4, 'cfa_dim': 256, 'cond': 1
             },
-            'checkpoint_dir': '../weights/KEEP',
+            'checkpoint_dir': '/home/user/app/weights/KEEP',
             'checkpoint_url': 'https://github.com/jnjaby/KEEP/releases/download/v1.0.0/KEEP-b76feb75.pth'
         },
     }
