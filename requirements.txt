@@ -8,15 +8,14 @@ pyyaml
 requests
 scikit-image
 scipy
-tb-nightly
 torch>=1.7.1
 torchvision
 tqdm
 yapf
 lpips
-gdown # supports downloading the large file from Google Drive
 diffusers==0.11.0
 einops
-huggingface_hub==0.20.2
+huggingface_hub==0.25.1
+pydantic==2.10.6
 ffmpeg-python==0.2.0
 av
