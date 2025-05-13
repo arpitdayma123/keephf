@@ -20,5 +20,3 @@ einops
 huggingface_hub==0.20.2
 ffmpeg-python==0.2.0
 av
-cmake # for dlib
-dlib
