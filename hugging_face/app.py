@@ -279,6 +279,7 @@ demo = gr.Interface(
         [os.path.join(os.path.dirname(__file__), sample_videos_dir, "real_3.mp4"), True, False],
         [os.path.join(os.path.dirname(__file__), sample_videos_dir, "real_4.mp4"), True, False],
     ],
+    cache_examples=False,
     article=post_article
 )
 
