@@ -239,11 +239,28 @@ download_url_to_file("https://github.com/jnjaby/KEEP/releases/download/media/rea
 download_url_to_file("https://github.com/jnjaby/KEEP/releases/download/media/real_3.mp4", os.path.join(sample_videos_dir, "real_3.mp4"))
 download_url_to_file("https://github.com/jnjaby/KEEP/releases/download/media/real_4.mp4", os.path.join(sample_videos_dir, "real_4.mp4"))
 
-model_dir = os.path.join("/home/user/app/", "weights/KEEP")
-_ = load_file_from_url(url='https://github.com/jnjaby/KEEP/releases/download/v1.0.0/KEEP-b76feb75.pth', model_dir=model_dir, progress=True, file_name=None)
 
-realesrgan_dir = os.path.join("/home/user/app/", "weights/realesrgan")
-_ = load_file_from_url(url='https://github.com/jnjaby/KEEP/releases/download/v1.0.0/RealESRGAN_x2plus.pth', model_dir=realesrgan_dir, progress=True, file_name=None)
+model_dir = "/home/user/app/weights/"
+model_url = "https://github.com/jnjaby/KEEP/releases/download/v1.0.0/"
+
+_ = load_file_from_url(url=os.path.join(model_url, 'KEEP-b76feb75.pth'),
+                        model_dir=os.path.join(model_dir, "KEEP"), progress=True, file_name=None)
+
+_ = load_file_from_url(url=os.path.join(model_url, 'detection_Resnet50_Final.pth'),
+                        model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
+_ = load_file_from_url(url=os.path.join(model_url, 'detection_mobilenet0.25_Final.pth'),
+                        model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
+_ = load_file_from_url(url=os.path.join(model_url, 'yolov5n-face.pth'),
+                        model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
+_ = load_file_from_url(url=os.path.join(model_url, 'yolov5l-face.pth'),
+                        model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
+_ = load_file_from_url(url=os.path.join(model_url, 'parsing_parsenet.pth'),
+                        model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
+
+_ = load_file_from_url(url=os.path.join(model_url, 'RealESRGAN_x2plus.pth'),
+                        model_dir=os.path.join(model_dir, "realesrgan"), progress=True, file_name=None)
+
+
 
 # Launching the Gradio interface.
 demo = gr.Interface(
