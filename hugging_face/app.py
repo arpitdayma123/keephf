@@ -250,12 +250,12 @@ _ = load_file_from_url(url=os.path.join(model_url, 'detection_Resnet50_Final.pth
                         model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
 _ = load_file_from_url(url=os.path.join(model_url, 'detection_mobilenet0.25_Final.pth'),
                         model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
-_ = load_file_from_url(url=os.path.join(model_url, 'yolov5n-face.pth'),
-                        model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
-_ = load_file_from_url(url=os.path.join(model_url, 'yolov5l-face.pth'),
-                        model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
-_ = load_file_from_url(url=os.path.join(model_url, 'parsing_parsenet.pth'),
-                        model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
+# _ = load_file_from_url(url=os.path.join(model_url, 'yolov5n-face.pth'),
+#                         model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
+# _ = load_file_from_url(url=os.path.join(model_url, 'yolov5l-face.pth'),
+#                         model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
+# _ = load_file_from_url(url=os.path.join(model_url, 'parsing_parsenet.pth'),
+#                         model_dir=os.path.join(model_dir, "facelib"), progress=True, file_name=None)
 
 _ = load_file_from_url(url=os.path.join(model_url, 'RealESRGAN_x2plus.pth'),
                         model_dir=os.path.join(model_dir, "realesrgan"), progress=True, file_name=None)
