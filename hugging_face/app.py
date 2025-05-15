@@ -16,6 +16,7 @@ from basicsr.utils.video_util import VideoReader, VideoWriter
 from basicsr.utils.registry import ARCH_REGISTRY
 import gradio as gr
 from torch.hub import download_url_to_file
+import spaces
 
 title = r"""<h1 align="center">KEEP: Kalman-Inspired Feature Propagation for Video Face Super-Resolution</h1>"""
 
@@ -77,6 +78,7 @@ def set_realesrgan():
         warnings.warn('Running on CPU now! Make sure your PyTorch version matches your CUDA. The unoptimized RealESRGAN is slow on CPU.', category=RuntimeWarning)
     return upsampler
 
+@spaces.GPU(duration=300)
 def process_video(input_video, draw_box, bg_enhancement):
     device = get_device()
     args = argparse.Namespace(
