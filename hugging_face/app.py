@@ -2,6 +2,7 @@ import os
 import cv2
 import argparse
 import glob
+import spaces
 import torch
 import numpy as np
 from tqdm import tqdm
@@ -16,7 +17,6 @@ from basicsr.utils.video_util import VideoReader, VideoWriter
 from basicsr.utils.registry import ARCH_REGISTRY
 import gradio as gr
 from torch.hub import download_url_to_file
-import spaces
 
 title = r"""<h1 align="center">KEEP: Kalman-Inspired Feature Propagation for Video Face Super-Resolution</h1>"""
 
