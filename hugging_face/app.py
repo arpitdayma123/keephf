@@ -94,7 +94,8 @@ def process_video(input_video, draw_box, bg_enhancement):
         bg_tile=400,
         suffix=None,
         save_video_fps=None,
-        model_type='KEEP'
+        model_type='KEEP',
+        progress=gr.Progress(track_tqdm=True)
     )
 
     output_dir = './results/'
