@@ -139,7 +139,6 @@ def initialize_models():
         det_model='retinaface_resnet50', # or 'retinaface_mobile0.25'
         save_ext='png',
         use_parse=True, # Enable parsing for segmentation
-        align_mode='cv2_affine_align', # Default from KEEP
         device=device,
         model_rootpath=MODEL_BASE_PATH # Base for dlib and parsing models
     )
