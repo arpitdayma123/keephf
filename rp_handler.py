@@ -47,7 +47,7 @@ model_configs = {
     },
     'KEEP': { # KEEP model
         'model_path': os.path.join(MODEL_BASE_PATH, 'KEEP', 'KEEP-b76feb75.pth'), # Actual path in Docker
-        'model_url': 'https://huggingface.co/DongSky/KEEP/resolve/main/KEEP-b76feb75.pth' # Fallback
+        'model_url': 'https://github.com/jnjaby/KEEP/releases/download/v1.0.0/KEEP-b76feb75.pth'
     }
 }
 
