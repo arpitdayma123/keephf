@@ -139,8 +139,7 @@ def initialize_models():
         det_model='retinaface_resnet50', # or 'retinaface_mobile0.25'
         save_ext='png',
         use_parse=True, # Enable parsing for segmentation
-        device=device,
-        model_rootpath=MODEL_BASE_PATH # Base for dlib and parsing models
+        device=device
     )
     # Manually set the landmark predictor path for face_helper if necessary
     # face_helper.face_parse.landmark_predictor.predictor = dlib.shape_predictor(dlib_model_path)
