@@ -133,3 +133,8 @@ run.sh
 *_old*
 
 *.swp
+
+# Custom additions for RunPod deployment
+input_videos/
+weights/
+.DS_Store
