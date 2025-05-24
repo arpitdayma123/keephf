@@ -6,7 +6,8 @@ import torch
 import numpy as np
 import requests
 import uuid
-from basicsr.utils import imwrite, img2tensor, tensor2img, load_file_from_url
+from basicsr.utils import imwrite, img2tensor, tensor2img # Removed load_file_from_url
+from basicsr.utils.download_util import load_file_from_url # Added new import
 from basicsr.utils import misc as misc_bsr # Renamed to avoid conflict
 from basicsr.utils import video_util
 from basicsr.utils.registry import ARCH_REGISTRY
